@@ -1,0 +1,19 @@
+{
+    "name": "yGuide Remover",
+    "version": "1",
+    "manifest_version": 2,
+    "description": "Remove idiotic 'Guide' block when viewing YouTube videos.",
+    "background": { 
+        "scripts": ["background.js"] 
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://www.youtube.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": [
+        "tabs", 
+        "http://*/*"
+    ]
+}
